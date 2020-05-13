@@ -1,0 +1,8 @@
+<?php 
+function add_cart_fee() {
+
+		WC()->cart->add_fee( __('Shipping Fee', 'woocommerce'), 50);
+
+}
+add_action( 'woocommerce_cart_calculate_fees', 'add_cart_fee');
+?>
